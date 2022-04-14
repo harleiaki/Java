@@ -44,7 +44,7 @@ public class AppCadastroFuncionario {
 			PreparedStatement stmt = cn.prepareStatement(sql);
 			stmt.setString(1,documento);
 			stmt.setString(2,nome);
-			stmt.setInt(3,idade);
+			stmt.setInt	  (3,idade);
 			stmt.setString(4,sexo);
 			stmt.setString(5,cargo);
 			stmt.setDouble(6,salario);

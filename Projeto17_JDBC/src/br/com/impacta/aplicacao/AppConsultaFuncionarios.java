@@ -3,6 +3,7 @@ package br.com.impacta.aplicacao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class AppConsultaFuncionarios {
 	public static void main(String[] args) {
@@ -22,7 +23,22 @@ public class AppConsultaFuncionarios {
 			
 			PreparedStatement stmt = cn.prepareStatement(sql);
 			
-			stmt.executeQuery();
+			ResultSet rs = stmt.executeQuery(); //Vai ler a proxima linha
+			
+			//listando os registros;
+			
+			while(rs.next()) {
+				
+				System.out.println("Documento: " + rs.getString("DOCUMENTO"));
+				System.out.println("Nome: "      + rs.getString("NOME"));
+				System.out.println("Idade: "     + rs.getInt   ("IDADE"));
+				System.out.println("Sexo: "      + rs.getString("SEXO"));
+				System.out.println("Cargo: "     + rs.getString("CARGO"));
+				System.out.println("Salario: "   + rs.getDouble("SALARIO"));
+				System.out.println();
+				
+				
+			}
 			
 			
 		} catch (Exception e) {
