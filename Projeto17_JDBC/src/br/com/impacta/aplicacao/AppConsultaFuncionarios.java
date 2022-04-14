@@ -20,7 +20,9 @@ public class AppConsultaFuncionarios {
 			
 			String sql = "SELECT * FROM TBFUNCIONARIOS";
 			
-			PreparedStatement stmt = cn.prepareCall(sql);
+			PreparedStatement stmt = cn.prepareStatement(sql);
+			
+			stmt.executeQuery();
 			
 			
 		} catch (Exception e) {
