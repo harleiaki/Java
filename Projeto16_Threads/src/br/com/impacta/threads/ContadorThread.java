@@ -8,12 +8,12 @@ public class ContadorThread extends Thread {
 		try {
 			
 			for(int i=0; i< 20; i++) {
-				System.out.println("*********");
-				Thread.sleep(500);
+				
+				System.out.print("*");
+				Thread.sleep(250);
 				
 				
 			}
-			
 			
 			
 		} catch (Exception e) {
