@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Collection;
 
 public abstract class Dao <T,K> {
 
@@ -32,8 +33,9 @@ public abstract class Dao <T,K> {
 		
 	}
 	
-	public abstract void incluir(T item);
-	public abstract void buscar(K id);
+	public abstract void incluir(T item) throws Exception;
+	public abstract void buscar(K id) throws Exception;
+	public abstract Collection<T> listar() throws Exception;
 		
 	
 
