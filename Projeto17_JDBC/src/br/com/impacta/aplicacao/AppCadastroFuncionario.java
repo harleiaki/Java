@@ -50,7 +50,7 @@ public class AppCadastroFuncionario {
 			stmt.setDouble(6,salario);
 			
 			stmt.executeUpdate();
-			JOptionPane.showMessageDialog(null, "Funcionário incluído com sucesso!");
+					JOptionPane.showMessageDialog(null, "Funcionário incluído com sucesso!");
 	
 			
 			
