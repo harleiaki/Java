@@ -13,10 +13,10 @@ public class AppCadastroFuncionario {
 		try {
 			
 			String conexao = 
-					"jdbc:mysql://localhost:3306/db_cadastro?autoSSL=false";
+					"jdbc:mysql://localhost:3306/db_cadastro?autoSSL=false ";
 			
 			Class.forName
-					("com.mysql.jdbc.Driver");
+					("com.mysql.jdbc.Driver ");
 			
 			Connection cn = 
 					(Connection)DriverManager.getConnection(conexao,"root", "Imp@ct@");
@@ -28,17 +28,17 @@ public class AppCadastroFuncionario {
 			
 			
 			String documento = 
-					JOptionPane.showInputDialog("Informe os documentos:");
+					JOptionPane.showInputDialog("Informe os documentos: ");
 			String nome = 
-					JOptionPane.showInputDialog("Informe o nome:");
+					JOptionPane.showInputDialog("Informe o nome: ");
 			int idade = Integer.parseInt(
-					JOptionPane.showInputDialog("Informe a idade"));
+					JOptionPane.showInputDialog("Informe a idade: "));
 			String sexo = 
-					JOptionPane.showInputDialog("Informe o sexo (M ou F):");
+					JOptionPane.showInputDialog("Informe o sexo (M ou F): ");
 			String cargo = 
-					JOptionPane.showInputDialog("Informe o cargo:");
+					JOptionPane.showInputDialog("Informe o cargo: ");
 			double salario = Double.parseDouble(
-					JOptionPane.showInputDialog("Informe o salário:"));
+					JOptionPane.showInputDialog("Informe o salário: "));
 			
 			
 			PreparedStatement stmt = cn.prepareStatement(sql);
@@ -50,7 +50,7 @@ public class AppCadastroFuncionario {
 			stmt.setDouble(6,salario);
 			
 			stmt.executeUpdate();
-					JOptionPane.showMessageDialog(null, "Funcionário incluído com sucesso!");
+					JOptionPane.showMessageDialog(null, "Funcionário incluído com sucesso! ");
 	
 			
 			
